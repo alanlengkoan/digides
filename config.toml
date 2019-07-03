@@ -5,4 +5,5 @@ theme = "digides"
 builddrafts = false
 canonifyurls = true
 contentdir = "content"
+disqusShortname = "digides"
 Paginate = 2
