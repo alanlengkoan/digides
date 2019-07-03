@@ -1,0 +1,26 @@
+<!-- Klien -->
+<div id="klien" class="colorlib-putih" style="background-color:white; padding: 30px; color: grey; ">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box">
+                <h2>Klien Kami</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                {{ range first 3 (where .Pages "Section" "gambar") }}
+                    <div class="col-md-4 text-center animate-box no-border">
+                        <div class="staff-entry no-border">
+                            <!-- untuk bagian gambar -->
+                            {{ $logo := .Params.image }}
+                            {{ with $logo }}
+                                <a href="#" class="staff-img no-border" style="background-image: url({{ $logo }}); border-radius: 0px !important;"></a>
+                            {{ end }}
+                            <h3>{{ .Title }}</h3>
+                        </div>
+                    </div>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</div>

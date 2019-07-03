@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<!-- untuk memanggil file head dalam folder partials -->
+	{{ partial "head.html" . }}
+
+</head>
+<body>
+
+	<div class="colorlib-loader"></div>
+	<div id="page">
+
+		<!-- untuk memanggil file menu navbar dalam folder partials -->
+		{{ partial "nav.html" . }}
+
+		<!-- untuk memanggil file header dalam folder partials -->
+		{{ partial "header.html" . }}
+
+		<!-- Manfaat -->
+		<div id="aplikasi" class="colorlib-services colorlib-bg-white">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box">
+						<h2>Solusi yang Kami Berikan</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6 text-center animate-box">
+						<div class="services">
+							<span class="icon">
+								<i class="fas fa-city"></i>
+							</span>
+							<div class="desc">
+								<h3>Administrasi Desa</h3>
+								<p>Aplikasi pengelola informasi desa yang dapat digunakan secara mandiri oleh perangkat desa. Bermanfaat untuk mendukung fungsi dan tugas kantor desa, termasuk administrasi kependudukan, perencanaan, pelaporan, pengelolaan asset, pengelolaan anggaran, layanan publik dan lain sebagainya.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 text-center animate-box">
+						<div class="services">
+							<span class="icon">
+								<i class="fas fa-users"></i>
+							</span>
+							<div class="desc">
+								<h3>Pelayanan Desa</h3>
+								<p>Aplikasi pelayanan desa yang dapat digunakan secara mandiri oleh masyarakat. Mempermudah masyarakat dalam pelayanan administrasi, termasuk administrasi kependudukan, administrasi nikah, pertanahan dan lain sebagainya.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box">
+						<h2>Feature Add On</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-6 animate-box">
+						<div class="card" style="margin: 0 auto; margin-bottom: 30px;" >
+							<div  align="center">
+								<img class="lazy" src="/images/digides-dapodes.jpg" alt="Avatar" style="width:60%">
+							</div>
+							<div class="isi">
+								<h4 align="center"><b>Digital Dapodes
+								</b><p>(Data Pokok Desa)</p></h4> 
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-xs-6 animate-box">
+						<div class="card" style="margin: 0 auto; margin-bottom: 30px;">
+							<div align="center">
+								<img  align="center" class="lazy" src="/images/digides-surat.jpg" alt="Avatar" style="width:60%">
+							</div>
+							<div class="isi">
+								<h4 align="center"><b>Digital Persuratan
+								</b> <p>(Koneksi Dapodes)</p></h4>  
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-xs-6 animate-box">
+						<div class="card" style="margin: 0 auto; margin-bottom: 30px;">
+							<div  align="center">
+								<img class="lazy" src="/images/digides-mobile.jpg" alt="Avatar" style="width:60%">
+							</div>
+							<div class="isi">
+								<h4 align="center"><b>Digital Layanan</b><p>(Aplikasi Android <br> Masyarakat)</p></h4>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-xs-6 animate-box">
+						<div class="card" style="margin: 0 auto; margin-bottom: 30px;">
+							<div  align="center">
+								<img class="lazy" src="/images/digides-aset.jpg" alt="Avatar" style="width:60%">
+							</div>
+							<div class="isi">
+								<h4 align="center"><b>Digital Aset
+								</b><p>(Manajemen aset <br> dan  laporannya)</p></h4> 
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Fiturr --> 
+		<div id="fitur" class="colorlib-work-featured colorlib-bg-gray" style="padding: 0px; padding-bottom: 0px; padding-top: 100px">
+			<div class="container">
+				<div class="row mobile-wrap">
+					<div class="col-md-6 animate-box">
+						<div class="mobile-img shadow-wrapper pic-mobile" style="background-image: url(/images/23.png)"></div>
+					</div>
+					<div class="col-md-6 animate-box">
+						<div class="desc">
+							<h2>Fitur Lengkap dan Mudah Digunakan</h2>
+							<p> Digides memiliki fitur yang dibutuhkan untuk mengelola data administrasi, kependudukan, pelayanan publik, anggaran dan masih banyak lagi.</p>
+							<br>
+							<div class="features">
+								<span class="icon"><i class="icon-globe"></i></span>
+								<div class="f-desc">
+									<p>Kelola data kependudukan dengan cara cerdas, cepat, tepat dan terintegrasi.</p>
+								</div>
+							</div>
+							<div class="features margin-top">
+								<span class="icon"><i class="icon-circle-compass"></i></span>
+								<div class="f-desc">
+									<p>Pelayanan administrasi menjadi lebih cepat dan efisien dengan <br>dukungan data akurat.</p>
+								</div>
+							</div>
+							<div class="features margin-top">
+								<span class="icon"><i class="icon-clock"></i></span>
+								<div class="f-desc">
+									<p>Kecepatan proses pelaporan data dan administrasi secara <br> realtime.</p>
+								</div>
+							</div>
+							<div class="features margin-top">
+								<span class="icon"><i class="icon-lock"></i></span>
+								<div style="border-bottom: 0px;" class="f-desc">
+									<p>Digides menggunakan teknologi cloud untuk kemudahan akses dan keamanan data. </p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row mobile-wrap">
+					<div class="col-md-5 col-md-push-7 animate-box">
+						<img class="mobile-img shadow-wrapper img-responsive lazy" src="/images/Layanan.png" style="height: 270px;" alt="">
+					</div>
+					<div class="col-md-7 col-md-pull-5 animate-box">
+						<div class="desc">
+							<h2>Fitur Administrasi Desa</h2>
+							<p>Aplikasi pengelola informasi desa yang dapat digunakan secara mandiri oleh perangkat desa. Bermanfaat untuk mendukung fungsi dan tugas kantor desa, termasuk administrasi kependudukan, perencanaan, pelaporan, pengelolaan asset, pengelolaan anggaran, layanan publik dan lain sebagainya</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="row mobile-wrap">
+					<div class="col-md-5 animate-box">
+						<img class="mobile-img shadow-wrapper img-responsive lazy" src="/images/Administrasi.png" style="height: 270px;" alt="">
+					</div>
+					<div class="col-md-7 animate-box">
+						<div class="desc">
+							<h2>Fitur Layanan Desa</h2>
+							<p> Aplikasi pelayanan desa yang dapat digunakan secara mandiri oleh masyarakat. Mempermudah masyarakat dalam administrasi, termaksud administrasi kependudukan, administrasi nikah, pertanahan dan lain sebagainya </p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Video -->
+		<div id="video" id="home" class="colorlib-intro video-hero " style="background-image: url(images/walpaper.jpg); background-size:cover; background-position: center center;background-attachment:fixed;" data-stellar-background-ratio="0.5" >
+			<div  class="overlay"></div>
+			<div class="container display-t" style="height: 0px;">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box">
+						<h2 style="color: white;">Lihat cara kami membantu Anda</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 animate-box">
+						<span class="play"><a style="background: white;" href="https://www.youtube.com/watch?v=7qiatCZbWCA" class="pulse popup-vimeo"><i class="icon-play3" style="color: #499bea;"></i></a></span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- ini untuk tampilan logo yang akan ditambah -->
+		{{ partial "gambar-logo.html" . }}
+		<!-- ini untuk tampilan logo yang akan ditambah -->
+
+		<!-- ini untuk tampilan artikel yang akan ditambah -->
+		{{ partial "post-list.html" . }}
+		<!-- ini untuk tampilan artikel yang akan ditambah -->
+
+		<!-- untuk menampilkan tampilan file foot dalam folder partials -->
+		{{ partial "footer.html" . }}
+
+	</div>
+
+	<!-- untuk memanggil file foot dalam folder partials -->
+	{{ partial "foot.html" . }}
+
+</body>
+</html>

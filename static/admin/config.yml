@@ -1,0 +1,46 @@
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: "static/images/logo"
+public_folder: "images/logo"
+
+collections:
+- name: "post"
+  label: "Post"
+  folder: "content/post"
+  create: true
+  slug: "{{year}}-{{slug}}"
+  fields:
+    - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+    - {label: "Title", name: "title", widget: "string"}
+    - {label: "Publish Date", name: "date", widget: "datetime"}
+    - {label: "Featured Image", name: "thumbnail", widget: "image"}
+    - {label: "Draft", name: "draft", widget: "boolean", default: false}
+    - {label: "Header Image", name: image, widget: image, required: false}
+    - {label: Commenting, name: comments, widget: boolean, default: true}
+    - {label: Sharing, name: share, widget: boolean, default: true}
+    - {label: Type, name: "type", widget: hidden, default: "post"}
+    - {label: "Body", name: "body", widget: "markdown", required: false}
+- name: "gambar"
+  label: "Gambar"
+  folder: "content/gambar"
+  create: true
+  slug: "{{year}}-{{slug}}"
+  fields:
+    - {label: "Title", name: "title", widget: "string"}
+    - {label: "Publish Date", name: "date", widget: "datetime"}
+    - {label: "Draft", name: "draft", widget: "boolean", default: false}
+    - {label: "Featured Image", name: "thumbnail", widget: "image"}
+    - {label: "Header Image", name: image, widget: image, required: false}
+- name: "slide"
+  label: "Slide"
+  folder: "content/slide"
+  create: true
+  slug: "{{year}}-{{slug}}"
+  fields:
+    - {label: "Title", name: "title", widget: "string"}
+    - {label: "Publish Date", name: "date", widget: "datetime"}
+    - {label: "Draft", name: "draft", widget: "boolean", default: false}
+    - {label: "Featured Image", name: "thumbnail", widget: "image"}
+    - {label: "Header Image", name: image, widget: image, required: false}

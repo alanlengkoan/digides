@@ -1,0 +1,8 @@
+baseURL = "https://digides.netlify.com/"
+languageCode = "en-us"
+title = "Digital Desa | Upana Studio"
+theme = "digides"
+builddrafts = false
+canonifyurls = true
+contentdir = "content"
+Paginate = 2

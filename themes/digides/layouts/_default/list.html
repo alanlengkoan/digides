@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- untuk memanggil file head dalam folder partials -->
+	{{ partial "head.html" . }}
+</head>
+<body>
+
+	<div class="colorlib-loader"></div>
+	<div id="page">
+		<!-- untuk menu nav -->
+		{{ partial "nav-post-all.html" . }}
+		<!-- untuk menu nav -->
+
+		<!-- ini untuk tampilan semua artikel yang akan ditambah -->
+		{{ partial "post-list-all.html" . }}
+		<!-- ini untuk tampilan semua artikel yang akan ditambah -->
+
+		<!-- untuk footer -->
+		{{ partial "footer.html" . }}
+		<!-- untuk footer -->
+	</div>
+
+	<!-- untuk memanggil file foot dalam folder partials -->
+	{{ partial "foot.html" . }}
+</body>
+</html>

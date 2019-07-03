@@ -1,0 +1,16 @@
+{
+    "name": "Digital Desa",
+    "short_name": "DIGIDES",
+    "description": "Kemudahan pengelolaan, Ketepatan, Keamanan dan Kevalidan Data Desa.",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "background_color": "#9932CC",
+    "theme_color": "#9932CC",
+    "icons": [
+        {
+            "src": "icon.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

@@ -1,0 +1,27 @@
+<div style="z-index: 0;" class="colorlib-featured">
+    <div class="row animate-box">
+        <div class="featured-wrap">
+            <div class="owl-carousel">
+                {{ range first 3 (where .Pages "Section" "slide") }}
+                    <div class="item">
+                        <div class="col-md-8 col-md-offset-2">
+							<!-- untuk bagian gambar -->
+                            {{ $komputer := .Params.image }}
+							{{ with $komputer }}
+								<img class="img-responsive lazy" src="{{ $komputer }}" alt="">							
+                            {{ end }}
+						</div>
+					</div>
+				{{ end }}
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row" style="padding: 0;">
+	<div class="col-md-8 col-md-offset-2 text-center colorlib-heading" style="color: grey;">
+		<h3 style="color: #7b7575;">
+			Digides memberikan solusi pelayanan masyarakat dengan cara akurat, cepat dan cerdas. Digides dikembangkan dengan teknologi paling mutakhir yang memberikan jaminan kemudahan pengelolaan, ketepatan, keamanan dan kevalidan data desa.
+		</h3>
+	</div>
+</div>

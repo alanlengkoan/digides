@@ -1,0 +1,23 @@
+.colorlib-nav /*ul li*/ a:hover{
+    background: none;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.nav > li > a:focus {
+	background-color: transparent !important;
+}
+
+@media only screen and (max-width: 300px ) {
+	.size-for-pic {
+		background-size: 200px !important;
+		width: 100%;
+		height: auto;
+	}
+
+	.size-for-pic2 {
+		background-size: 100px !important;
+
+	}
+
+}
+

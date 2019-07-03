@@ -1,0 +1,119 @@
+	<!-- jQuery -->
+	<script src="/js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="/js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="/js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="/js/jquery.waypoints.min.js"></script>
+	<!-- Stellar Parallax -->
+	<script src="/js/jquery.stellar.min.js"></script>
+	<script src="/js/script.js"></script>
+	<!-- YTPlayer -->
+	<script src="/js/jquery.mb.YTPlayer.min.js"></script>
+	<!-- Owl carousel -->
+	<script src="/js/owl.carousel.min.js"></script>
+	<!-- Magnific Popup -->
+	<script src="/js/jquery.magnific-popup.min.js"></script>
+	<script src="/js/magnific-popup-options.js"></script>
+	<!-- Counters -->
+	<script src="/js/jquery.countTo.js"></script>
+	<!-- Main -->
+	<script src="/js/main.js"></script>
+	<!-- Modernizr JS -->
+	<script src="/js/modernizr-2.6.2.min.js"></script>
+	<!-- Modal -->
+	<script src="/modal/js/velocity.min.js"></script>
+	<script src="/modal/js/main.js"></script> <!-- Resource jQuery -->
+	<!-- lazy loading -->
+	<script src="/lazy/jquery.lazy.min.js"></script>
+	<script src="/js/paralaks.js"></script>
+	<!-- swhichalert -->
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+
+	<script type="text/javascript">
+		$('.readmore').click(function(e){
+			$('.top-menu').hide();
+		}); 
+
+		$('.cd-modal-close').click(function(e){
+			$('.top-menu').delay(500).show(0);
+		});
+
+		$('.readmore').click(function(e){
+			$('.gototop.active').hide();
+		}); 
+
+		$('.cd-modal-close').click(function(e){
+			$('.gototop.active').delay(500).show(0);
+		});
+
+		$('.readmore').click(function(e){
+			$('.overflow offcanvas').hide();
+		}); 
+
+		$('.cd-modal-close').click(function(e){
+			$('.overflow offcanvas').delay(500).show(0);
+		});
+
+		function lihatdemo() {
+			Swal.fire({
+				title: 'Masukkan Alamat Email',
+				input: 'text',
+				inputAttributes: {
+					autocapitalize: 'off'
+				},
+				showCancelButton: true,
+				confirmButtonText: 'Kirim',
+				showLoaderOnConfirm: true,
+				preConfirm: (email) => {
+					return fetch('https://digitaldesa.id/mailer.php?email=${email}')
+					.then(response => {
+						if (!response.ok) {
+							throw new Error(response.statusText)
+						}
+						return response.json()
+					})
+					.catch(error => {
+						Swal.showValidationMessage(
+							`Terjadi Kesalahan. Coba Lagi!`
+							)
+					})
+				},
+				allowOutsideClick: () => !Swal.isLoading()
+			}).then((result) => {
+				console.log(result)
+				if (result.value) {
+					Swal.fire({
+						title: `Kami sudah mengirimkan demo ke email anda. Silahkan cek Email Anda!`
+					})
+				}else{
+					title: `Tejadi Kesalahan. Silahkan Coba Lagi!`
+				}
+			})
+		}
+
+
+		function artikel() {
+			Swal.fire('Any fool can use a computer')
+		}
+
+		function visitor_count() {
+			Swal.fire('Any fool can use a computer')
+		}
+
+		$(function() {
+			$('.lazy').Lazy();
+		});
+
+
+	</script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-142492956-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-142492956-1');
+	</script>
