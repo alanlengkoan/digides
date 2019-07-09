@@ -1,1 +1,53 @@
-ini adalah halaman single untuk melihat tampilan berita atau read more
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- untuk memanggil file head dalam folder partials -->
+    {{ partial "head.html" . }}
+</head>
+
+<body>
+
+    <div class="colorlib-loader"></div>
+    <div id="page">
+        <!-- untuk menu nav -->
+        {{ partial "nav-post-all.html" . }}
+        <!-- untuk menu nav -->
+
+        <div class="colorlib-work" style="padding: 0px !important;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box" style="margin-bottom: 0px;">
+                        <h2 style="font-weight: bolder">{{ .Name }}</h2>
+                    </div>
+                </div>
+                <div class="row" style="text-align: justify;">
+                    <div class="col-md-12" style="margin-bottom: 100px;">
+
+                        <!-- untuk bagian gambar -->
+                        {{ $gambar := .Params.image }}
+                        {{ with $gambar }}
+                        <img style="width: 100%;" class="lazy" src="{{ $gambar }}">
+                        {{ end }}
+                        <!-- untuk bagian gambar -->
+
+                        <p style="margin-top: 20px; margin-bottom: 5px;"> <i class="fa fa-calendar-alt"></i> {{ .PublishDate.Format "Monday, 2 January 2006" }}</p>
+                        <p style="margin-top: 5px; margin-bottom: 5px;"> <i class="fa fa-clock"></i> {{ .PublishDate.Format "15:04" }}</p>
+
+                        <p>{{ .Content }}</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- untuk footer -->
+        {{ partial "footer.html" . }}
+        <!-- untuk footer -->
+    </div>
+
+    <!-- untuk memanggil file foot dalam folder partials -->
+    {{ partial "foot.html" . }}
+</body>
+
+</html>
