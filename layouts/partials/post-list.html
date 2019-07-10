@@ -1,100 +1,99 @@
 <div id="artikel" class="colorlib-work" style="padding: 0px !important;">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box" style="margin-bottom: 0px;">
-				<h2>Artikel</h2>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box" style="margin-bottom: 0px;">
+					<h2>Artikel</h2>
+				</div>
 			</div>
-		</div>
-		<div class="row text-center">
-			<div class="col-md-12">
+			<div class="row text-center">
+				<div class="col-md-12">
 
-				<!-- awal untuk mengepos artikel -->
-				{{ range first 6 (where .Pages "Section" "post") }}
-				<div class="col-md-4" style="padding-bottom: 100px;">
-					<section class="cd-section">
-						<div class="cd-modal-action">
-
-							<a class="tampilkan-modal" data-type="modal-trigger">
-								<article class="article-modal">
-									<div class="work-flex" style="height: 150px;">
-										<div class="half" style="height: 0px;">
-											<div class="row no-gutters">
-												<div class="col-md-12 no-gutters">
-
-													<!-- untuk bagian gambar -->
-													{{ $gambar := .Params.image }}
-													{{ with $gambar }}
-													<div class="work-img" style="background-image: url({{ $gambar }}); height: 190px;"></div>
-													{{ end }}
-
+					<div class="row">
+						<!-- awal untuk mengepos artikel -->
+						{{ range first 6 (where .Pages "Section" "post") }}
+						<div class="col-md-4" style="padding-bottom: 100px;">
+							<section class="cd-section">
+								<div class="cd-modal-action">
+		
+									<a class="tampilkan-modal" data-type="modal-trigger">
+										<article class="article-modal">
+											<div class="work-flex" style="height: 150px;">
+												<div class="half" style="height: 0px;">
+													<div class="row no-gutters">
+														<div class="col-md-12 no-gutters">
+		
+															{{ $gambar := .Params.image }}
+															{{ with $gambar }}
+															<div class="work-img" style="background-image: url({{ $gambar }}); height: 190px;"></div>
+															{{ end }}
+		
+														</div>
+													</div>
 												</div>
-											</div>
-										</div>
-										<div class="half " style="height: 0px;">
-											<div class="row no-gutters">
-												<div class="col-md-12 no-gutters">
-													<div class="display-t desc" style="height: 190px; padding: 0 1em;">
-														<div class="display-tc">
-															<h2 style="font-size: 20px;">
-																{{ .Title }}
-															</h2>
-															<br>
-															<p style="line-height: 0px; margin: 0px;">
-																<span class="btn readmore" style="background-color: #4aca85; display: inline; line-height: none; color: white;">
-																	Baca lebih lanjut
-																</span>
-															</p>
+												<div class="half " style="height: 0px;">
+													<div class="row no-gutters">
+														<div class="col-md-12 no-gutters">
+															<div class="display-t desc" style="height: 190px; padding: 0 1em;">
+																<div class="display-tc">
+																	<h2 style="font-size: 20px;">
+																		{{ .Title }}
+																	</h2>
+																	<br>
+																	<p style="line-height: 0px; margin: 0px;">
+																		<span class="btn readmore" style="background-color: #4aca85; display: inline; line-height: none; color: white;">
+																			Baca lebih lanjut
+																		</span>
+																	</p>
+																</div>
+															</div>
 														</div>
 													</div>
 												</div>
 											</div>
-										</div>
+										</article>
+									</a>
+									<span class="cd-modal-bg"></span>
+								</div>
+		
+								<div id="{{ .Name }}" class="cd-modal">
+									<div class="cd-modal-content" style="z-index: 9999 !important;">
+										<h2 class="text-artikel" >
+											{{ .Name }}
+										</h2>
+
+										{{ $gambar := .Params.image }}
+										{{ with $gambar }}
+										<img style="width: 100%;" class="lazy" src="{{ $gambar }}">
+										{{ end }}
+		
+										{{ .Content }}
+		
+										{{ partial "share-button.html" . }}
+		
 									</div>
-								</article>
-							</a>
-
-							<span class="cd-modal-bg"></span>
+								</div>
+								<a class="cd-modal-close">Close</a>
+							</section>
 						</div>
-
-						<div id="{{ .Name }}" class="cd-modal">
-							<div class="cd-modal-content" style="z-index: 9999 !important;">
-								<h2 class="text-artikel" >
-									{{ .Name }}
-								</h2>
-								<!-- untuk bagian gambar -->
-								{{ $gambar := .Params.image }}
-								{{ with $gambar }}
-								<img style="width: 100%;" class="lazy" src="{{ $gambar }}">
-								{{ end }}
-
-								{{ .Content }}
-
-								<!-- untuk tombol share -->
-								{{ partial "share-button.html" . }}
-
-							</div>
-						</div>
-						<a class="cd-modal-close">Close</a>
-					</section>
+		
+						<script type="text/javascript">	
+							var classa = document.getElementsByClassName('tampilkan-modal');
+							var classb = document.getElementsByClassName('cd-modal-close');
+		
+							classa.setAttribute('href', '{{ .Name }}');
+							classb.setAttribute('href', '{{ .Name }}');
+						</script>
+		
+						{{ end }}
+						<!-- akhir untuk mengepost artikel -->
+					</div>
 				</div>
-
-				<script type="text/javascript">	
-					var classa = document.getElementsByClassName('tampilkan-modal');
-					var classb = document.getElementsByClassName('cd-modal-close');
-
-					classa.setAttribute('href', '{{ .Name }}');
-					classb.setAttribute('href', '{{ .Name }}');
-				</script>
-
-				{{ end }}
-				<!-- akhir untuk mengepost artikel -->
-			</div>
-			
-			<div style="padding-bottom: 100px;">
-				<a href="post" class="btn btn-primary btn-outline with-arrow" style="background-color: #4aca85; border: 1px solid #f5f5f5; ">
-					Lihat Berita<i class="icon-arrow-right3"></i>
-				</a>
+				
+				<div style="padding-bottom: 100px;">
+					<a href="post" class="btn btn-primary btn-outline with-arrow" style="background-color: #4aca85; border: 1px solid #f5f5f5; ">
+						Lihat Berita<i class="icon-arrow-right3"></i>
+					</a>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>

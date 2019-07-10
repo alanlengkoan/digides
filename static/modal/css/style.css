@@ -164,6 +164,7 @@ header h1 {
   line-height: 4em;
   white-space: nowrap;
   font-weight: 700;
+  font-size: 12px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-transition: color 0.2s 0.3s, width 0.3s 0s;
